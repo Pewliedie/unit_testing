@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Calculator" parallel="classes" thread-count="4">
+    <test verbose="4" name="C:/Users/Wladyslaw/IdeaProjects/unit_testing/src/test/java/xmls">
+
+        <groups>
+            <run>
+                <include name="sum-test"/>
+                <include name="func-test"/>
+            </run>
+        </groups>
+
+
+        <classes>
+            <class name="calculator.testNG.CalculatorSumTestLong"/>
+            <class name="calculator.testNG.CalculatorSubTestLong"/>
+            <class name="calculator.testNG.CalculatorSubTestDouble"/>
+            <class name="calculator.testNG.CalculatorSumTestDouble"/>
+            <class name="calculator.testNG.CalculatorDivTestDouble"/>
+            <class name="calculator.testNG.CalculatorDivTestLong"/>
+            <class name="calculator.testNG.CalculatorIsNegativeTest"/>
+            <class name="calculator.testNG.CalculatorIsPositiveTest"/>
+            <class name="calculator.testNG.CalculatorTgTest"/>
+            <class name="calculator.testNG.CalculatorCtgTest"/>
+        </classes>
+    </test>
+</suite>
