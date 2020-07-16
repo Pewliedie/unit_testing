@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Calc">
+    <test verbose="4" name="C:/Users/Wladyslaw/IdeaProjects/unit_testing/src/test/java/xmls">
+
+        <classes>
+            <class name="calculator.testNG.CalculatorIsNegativeTest"/>
+            <class name="calculator.testNG.CalculatorIsPositiveTest"/>
+            <class name="calculator.testNG.CalculatorTgTest"/>
+        </classes>
+    </test>
+</suite>
