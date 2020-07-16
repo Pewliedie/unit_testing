@@ -38,6 +38,6 @@ public class CalcPowTest extends JunitBaseClass{
    public void powTest(){
         casterDouble.cast(a,b,expected);
         double result = calculator.pow(casterDouble.getA(),casterDouble.getB());
-       Assert.assertEquals(casterDouble.getC(),result,0.0001);
+       Assert.assertEquals("Invalid result of exponentiation",casterDouble.getC(),result,0.0001);
    }
 }

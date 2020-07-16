@@ -11,7 +11,7 @@ public class CalculatorSubTestDouble extends BaseCalculatorTest {
     public void subTestWithDoubles(Object a, Object b, Object expected) {
         casterDouble.cast(a, b, expected);
         double result = calculator.sub(casterDouble.getA(), casterDouble.getB());
-        Assert.assertEquals(result, casterDouble.getC());
+        Assert.assertEquals(result, casterDouble.getC(),"Invalid result of subtraction");
     }
 
     @DataProvider(name = "sumDoubleDataProvider")

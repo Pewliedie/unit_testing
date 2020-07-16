@@ -38,6 +38,6 @@ public class CalcMultLongTest extends JunitBaseClass {
     public void multTest() {
         casterLong.cast(a, b, expected);
         long result = calculator.mult(casterLong.getA(), casterLong.getB());
-        Assert.assertEquals(casterLong.getC(), result);
+        Assert.assertEquals("Invalid result of multiplication",casterLong.getC(), result);
     }
 }

@@ -12,7 +12,7 @@ public class CalculatorSumTestLong extends BaseCalculatorTest {
         casterLong.cast(a, b, expected);
 
         long result = calculator.sum(casterLong.getA(), casterLong.getB());
-        Assert.assertEquals(result, casterLong.getC());
+        Assert.assertEquals(result, casterLong.getC(),"Invalid result of addition");
     }
 
     @DataProvider(name = "sumLongDataProvider")

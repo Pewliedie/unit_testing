@@ -16,12 +16,12 @@ public class CalculatorDivTestDouble extends BaseCalculatorTest{
         double result = calculator.div(casterDouble.getA(),casterDouble.getB());
     }
 
-    @Test(dataProvider = "divLongDataProvider")
+    @Test(dataProvider = "divLongDataProvider",groups = "func-test")
     @Parameters({"a", "b", "expected"})
     public void divTestWithLongs(Object a, Object b, Object expected) {
         casterDouble.cast(a, b, expected);
         double result = calculator.div(casterDouble.getA(),casterDouble.getB());
-        Assert.assertEquals(result,casterDouble.getC());
+        Assert.assertEquals(result,casterDouble.getC(),"Invalid result of division");
     }
 
     @DataProvider(name = "divLongDataProviderException")

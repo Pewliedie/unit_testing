@@ -12,7 +12,7 @@ public class CalculatorSubTestLong extends BaseCalculatorTest {
     public void subTestWithLongs(Object a, Object b, Object expected) {
         casterLong.cast(a, b, expected);
         long result = calculator.sub(casterLong.getA(),casterLong.getB());
-        Assert.assertEquals(result, casterLong.getC());
+        Assert.assertEquals(result, casterLong.getC(),"Invalid result of subtraction");
     }
 
     @DataProvider(name = "subLongDataProvider")

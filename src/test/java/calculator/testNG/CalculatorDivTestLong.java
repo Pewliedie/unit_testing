@@ -19,7 +19,7 @@ public class CalculatorDivTestLong extends BaseCalculatorTest {
     public void divTestWithLongs(Object a, Object b, Object expected) {
         casterLong.cast(a, b, expected);
         long result = calculator.div(casterLong.getA(), casterLong.getB());
-        Assert.assertEquals(result, casterLong.getC());
+        Assert.assertEquals(result, casterLong.getC(),"Invalid result of division");
     }
 
     @DataProvider(name = "divLongDataProviderException")

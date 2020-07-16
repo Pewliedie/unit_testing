@@ -11,7 +11,7 @@ public class CalculatorSumTestDouble extends BaseCalculatorTest {
     public void sumTestWithDoubles(Object a, Object b, Object expected) {
         casterDouble.cast(a, b, expected);
         double result = calculator.sum(casterDouble.getA(), casterDouble.getB());
-        Assert.assertEquals(result, casterDouble.getC());
+        Assert.assertEquals(result, casterDouble.getC(),"Invalid result of addition");
     }
 
     @DataProvider(name = "sumDoubleDataProvider")

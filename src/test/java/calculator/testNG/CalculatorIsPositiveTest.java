@@ -6,13 +6,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class CalculatorIsPositiveTest extends BaseCalculatorTest {
-    @Test(dataProvider = "DataProvider")
+    @Test(dataProvider = "DataProvider",
+            dependsOnMethods = "calculator.testNG.CalculatorIsNegativeTest.isNegativeTest", alwaysRun = true)
     @Parameters({"a", "expected"})
-    public void sumTestWithLongs(Object a, Object expected) {
+    public void isPositiveTest(Object a, Object expected) {
         casterLong.cast(a);
 
         boolean result = calculator.isPositive(casterLong.getA());
-        Assert.assertEquals(result, expected);
+        Assert.assertEquals(result, expected, "The number is negative");
     }
 
     @DataProvider(name = "DataProvider")

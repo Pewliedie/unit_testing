@@ -39,6 +39,6 @@ public class CalcMultDoubleTest extends JunitBaseClass {
     public void multTest() {
         casterDouble.cast(a, b, expected);
         double result = calculator.mult(casterLong.getA(), casterLong.getB());
-        Assert.assertEquals(casterLong.getC(),result,0.0);
+        Assert.assertEquals("Invalid result of multiplication",casterLong.getC(),result,0.0);
     }
 }

@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -32,6 +31,6 @@ public class CalcSinTest extends JunitBaseClass{
     public void powTest() {
         casterDouble.cast(a, expected);
         double result = calculator.sin(casterDouble.getA());
-        Assert.assertEquals(casterDouble.getC(), result, 0.0001);
+        Assert.assertEquals("Invalid sinus calculation result",casterDouble.getC(), result, 0.0001);
     }
 }

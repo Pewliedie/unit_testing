@@ -33,6 +33,6 @@ public class CalcSqrtTest extends JunitBaseClass{
     public void powTest(){
         casterDouble.cast(a,expected);
         double result = calculator.sqrt(casterDouble.getA());
-        Assert.assertEquals(casterDouble.getC(),result,0.0001);
+        Assert.assertEquals("Invalid result of the square root",casterDouble.getC(),result,0.0001);
     }
 }

@@ -26,6 +26,4 @@ public class BaseCalculatorTest {
     public void setUpCasterLong() {
         casterLong = new CasterLong();
     }
-
-
 }

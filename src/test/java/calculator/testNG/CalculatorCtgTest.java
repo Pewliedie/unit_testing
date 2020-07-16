@@ -11,7 +11,7 @@ public class CalculatorCtgTest extends BaseCalculatorTest {
     public void tangentTest(Object a, Object expected) {
         casterDouble.cast(a, expected);
         double result = calculator.ctg(casterDouble.getA());
-        Assert.assertEquals(result, casterDouble.getC(), 0.000001);
+        Assert.assertEquals(result, casterDouble.getC(), 0.000001,"Invalid cotangent calculation result");
     }
 
     @DataProvider(name = "DataProvider")
